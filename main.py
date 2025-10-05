@@ -99,3 +99,7 @@ for index, row in df.iterrows():
 
 df.to_csv('SB_publication_PMC_with_abstracts.csv', index=False)
 print("Scraping complete. Data saved to 'SB_publication_PMC_with_abstracts.csv'")
+
+
+df = pd.read_csv('SB_publication_PMC_with_abstracts.csv')
+df.to_json('SB_publication_PMC_with_abstracts.json', orient='records', indent=4)
